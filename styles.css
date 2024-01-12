@@ -11,18 +11,53 @@ body{
     line-height:1.5rem;
 }
 
+
 h1{
     font-size:32px;
     font-weight:bold;
-    text-align:center;
-    margin:40px 0 60px 0;
+    color:#08523b;
+}
+
+.box-container{
+    width:90%;
+    margin:2rem auto;
+    background-color:#faf2f2;
+    padding:3rem 1.3rem;
+    border-radius:3px;
+}
+
+.head-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-right:10px;
+}
+.form-container{
+    display:flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+.head-container img{
+    width:45px;
+    height:45px;
+border-radius:50%;
+margin-left:10px;
+box-shadow:0 0 5px rgba(0,0,0,0.6);
 }
 
 .form{
     display: flex;
-    justify-content:center;
+    justify-content:space-between;
     align-items:center;
-    margin-bottom:60px;
+    background-color:none;
+    max-width: 1200px;
+    border-top-left-radius: 5px;
+    border-top-right-radius:5px;
+    margin:1rem auto;
+    padding:2rem 1rem;
+    background-color: #f1e9e9;
+    box-shadow:0 0 5px rgba(0,0,0,0.4);
 }
 
 #search-input{
@@ -35,6 +70,7 @@ h1{
     border-radius:5px;
     color:#333;
     outline:none;
+    margin-bottom:6px;
 }
 
 #search-btn{
@@ -42,10 +78,10 @@ h1{
     border:none;
     font-size:18px;
     border-radius:5px;
-    margin-left:10px;
     color:#fff;
     box-shadow:0 0 6px rgba(0,0,0,0.4);
     padding:10px 20px;
+    margin:0 auto;
 }
 
 .search-results{
@@ -53,16 +89,28 @@ h1{
     flex-wrap:wrap;
     max-width:1200px;
     justify-content:space-between;
+    align-items:center;
+    border-bottom-left-radius:6px;
+    border-bottom-right-radius: 6px;
     margin:0 auto;
     padding:20px;
+    background-color:#fff;
+    box-shadow:0 0 9px rgba(0,0,0,0.4);
 }
 
 .search-result{
+    background-color:#faf3f3;
     width:30%;
     margin-bottom:60px;
     border-radius:5px;
     box-shadow:0 0 9px rgba(0,0,0,0.4);
     overflow:hidden;
+    margin-top:1rem;
+    transition:all ease-in-out;
+}
+
+.search-result:hover{
+    background-color:#138865;
 }
 
 .search-result img{
@@ -71,6 +119,7 @@ h1{
     object-fit:cover;
     object-position: center;
     transition:opacity .4s ease-in-out;
+    box-shadow:0 0 9px rgba(0,0,0,0.4);
 }
 
 .search-result img:hover{
@@ -90,7 +139,7 @@ transition: .2s ease-in-out;
 }
 
 .search-result a:hover{
-    color:#138865;
+    color:#fff;
 }
 
 #show-more-btn{
@@ -116,5 +165,8 @@ display:none;
 @media screen and (max-width:500px){
     .search-result{
         width:100%;
+    }
+    h1{
+        font-size:23px;
     }
 }
